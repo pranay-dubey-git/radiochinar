@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Radio Chinar 90.4 FM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header {
+            background: #333; /* Dark background */
+            padding: 10px 0;
+        }
+        .logo img {
+            max-width: 300px; /* Adjust logo size */
+        }
+        .button-items {
+            text-align: center;
+            /* margin-left: 100px;
+            margin-top: 10%; */
+        }
+        .controls {
+            margin-top: 0px;
+        }
+
+        .controls svg:nth-child(2) {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        #play {
+            padding: 0 3px;
+            width: 60px;
+            height: 60px;
+            enable-background: new 0 0 25 25;
+        }
+
+        #play g {
+            stroke: rgb(254, 254, 254);
+            stroke-width: 1;
+            stroke-miterlimit: 10;
+        }
+
+        #play g path {
+            fill: #ff2320;
+        }
+
+        #play:hover {
+            cursor: pointer;
+        }
+
+        #play:hover g {
+            stroke: #3e3185;
+            cursor: pointer;
+        }
+
+        #play:hover g path {
+            fill: #ff2320;
+            cursor: pointer;
+        }
+        #pause {
+            enable-background: new 0 0 25 25;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            margin-left: -60px;
+            cursor: pointer;
+        }
+
+        #pause rect {
+            fill: #ff2320;
+        }
+
+        #pause:hover rect {
+            fill: #d64015;
+        }
+    </style>
+    <script src="js/hlsaudioplayer.js"></script>
+</head>
+
+<body onload="testFlash();">
+    
+    <div id="wrapper">
+
+        <div>
+            
+            
+            <div class="button-items">
+                
+                <!-- <audio id="music" preload="auto"></audio> -->
+                
+                <div class="controls">
+                    <svg id="play" viewBox="0 0 25 25" xml:space="preserve">
+                        <g>
+                            <circle fill="#fff" cx="12.5" cy="12.5" r="10.8" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.7,6.9V18c0,0,0.2,1.4,1.8,0l8.1-4.8c0,0,1.2-1.1-1-2L9.8,6.5 C9.8,6.5,9.1,6,8.7,6.9z" />
+                        </g>
+                    </svg>
+                    <svg id="pause" viewBox="0 0 25 25" xml:space="preserve">
+                    
+                        <g>
+                            <circle fill="#fff" cx="12.5" cy="12.5" r="10.8" />
+                            <rect x="7.5" y="6.8" width="3.5" height="11.7" />
+                            <rect x="13.5" y="6.8" width="3.5" height="11.7" />
+
+                        </g>
+                    </svg>
+                </div>
+            </div>
+              
+        </div>
+        <script src="js/radioscript.js"></script>
+        
+</body>
+
+</html>
